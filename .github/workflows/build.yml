@@ -21,9 +21,6 @@ jobs:
       - name: 📦 Install dependencies
         run: npm install --legacy-peer-deps
 
-      - name: 🔍 Validate Expo Config
-        run: npx expo config
-
       - name: 👷 Build Android APK
         env:
           EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}

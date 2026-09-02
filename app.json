@@ -30,11 +30,6 @@
     },
     "plugins": [
       "react-native-android-widget"
-    ],
-    "extra": {
-      "eas": {
-        "projectId": "REPLACE_WITH_YOUR_PROJECT_ID"
-      }
-    }
+    ]
   }
 }

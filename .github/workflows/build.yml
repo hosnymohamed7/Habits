@@ -15,13 +15,16 @@ jobs:
         with:
           node-version: 20
 
-      - name: 🚀 Setup EAS CLI
+      - name: 🚀 Install EAS CLI
         run: npm install -g eas-cli
 
       - name: 📦 Install dependencies
-        run: npm install --legacy-peer-deps
+        run: |
+          npm config set legacy-peer-deps true
+          npm install --force
 
       - name: 👷 Build Android APK
         env:
           EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
         run: eas build --platform android --profile preview --non-interactive
+        
